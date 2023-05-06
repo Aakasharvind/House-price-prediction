@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>House Price Prediction</title>
+    <style>
+      body {
+        background:url("../static/home.jpg") no-repeat fixed center;
+      }
+      h1 {
+        color: #f5de50;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 0 20px;
+        text-align: center;
+        text-shadow: 1px 1px #000000;
+      }
+      .container {
+        background-color: #000000;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 600px;
+        padding: 20px;
+        position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+      }
+      .price {
+        background-color: #f5de50;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #000000;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px auto;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+        text-shadow: 1px 1px #000000;
+        animation: zoom-in 1s;
+      }
+      .price:before {
+        content: "";
+        display: block;
+        height: 50px;
+        margin: -10px auto 20px;
+        width: 50px;
+        background-image: url("home.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      @keyframes zoom-in {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>House Price Prediction Result</h1>
+      <div class="price">
+        <p>The predicted price of the house is:</p>
+        <p>{{ predicted_price }}</p>
+      </div>
+    </div>
+  </body>
+</html>
